@@ -1,6 +1,8 @@
 public class App {
 
     public static void main(String[] args) {
-        int xml;
+        DbMovieRepository dbMovieRepository = new DbMovieRepository();
+        MovieReport movieReport = new MovieReport(dbMovieRepository);
+        movieReport.generate();
     }
 }
